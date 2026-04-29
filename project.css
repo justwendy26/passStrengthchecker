@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+.card>h1{
+    text-transform: uppercase;
+    text-decoration: solid;
+}
+.container{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background: white;
+    border-radius: 16px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 40px rgba(0 ,0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+h1{
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+.subtitle{
+    color: gray;
+    margin-bottom: 12px;
+    color: rgb(56, 56, 56);
+}
+.info{
+    text-align: left;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.info>h2{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+    color: #333;
+}
+.info>ul{
+    list-style-position: inside;
+    color: #555;
+    padding-left: 5px;
+}
+.info>li{
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+#passwordInput{
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border 0.2s ease;
+}
+#passwordInput:focus{border-color: #667eea;}
+#checkBtn {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  letter-spacing: 0.3px;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-bottom: 16px;
+}
+#checkBtn:hover{
+background: linear-gradient(135deg, #667eea, #764ba2);
+transform: translateY(-2px) scale(1.05);
+box-shadow: 0 8px 16px rgba(102,126,234,0.3);
+}
+#feedback{
+    min-height:24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.note{
+    font-size: 16px;
+    color:gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+footer{
+    margin-top: 24px;
+    color: whitesmoke;
+    opacity: 0.8;
+    font-size: 14px;
+    text-align: center;
+}
+.card {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 32px 24px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  #checkBtn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  #passwordInput {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .info {
+    padding: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
