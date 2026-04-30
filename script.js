@@ -28,19 +28,19 @@ const passStrengthChecker = (password) => {
 
   if (score <= 1) {
     strengthLevel = `VERY WEAK!`;
-    message = //type message suggestion here;
+    message = "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
       document.getElementById("feedback").style.color = "red";
   } else if (score == 2) {
     strengthLevel = `WEAK!`;
-    message = //type message suggestion here ;
+    message = "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
       document.getElementById("feedback").style.color = "orange";
   } else if (score <= 4) {
     strengthLevel = `STRONG!`;
-    message = //type message suggestion here ;
+    message = "Please ensure that your password also include at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
       document.getElementById("feedback").style.color = "green";
   } else {
     strengthLevel = `VERY STRONG!`;
-    message = //type message suggestion here ;
+    message = "Great! Congratulations"
       document.getElementById("feedback").style.color = "darkgreen";
   }
 
