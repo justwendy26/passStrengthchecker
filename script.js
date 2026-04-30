@@ -3,7 +3,7 @@ const passStrengthChecker = (password) => {
   let score = 0;
 
   //CRITERIA ONE --- AT LEAST 8 ELEMENTS
-  if (password.length >= 8) {
+  if (password.length === 8) {
     score++;
   }
   // CRITERIA TWO --- AT LEAST 12 ELEMENTS
