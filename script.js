@@ -28,20 +28,23 @@ const passStrengthChecker = (password) => {
 
   if (score <= 1) {
     strengthLevel = `VERY WEAK!`;
-    message = "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
-      document.getElementById("feedback").style.color = "red";
+    message =
+      "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)";
+    document.getElementById("feedback").style.color = "red";
   } else if (score == 2) {
     strengthLevel = `WEAK!`;
-    message = "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
-      document.getElementById("feedback").style.color = "orange";
+    message =
+      "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)";
+    document.getElementById("feedback").style.color = "orange";
   } else if (score <= 4) {
     strengthLevel = `STRONG!`;
-    message = "Please ensure that your password also include at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)"
-      document.getElementById("feedback").style.color = "green";
+    message =
+      "Please ensure that your password also include at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)";
+    document.getElementById("feedback").style.color = "green";
   } else {
     strengthLevel = `VERY STRONG!`;
-    message = "Great! Congratulations"
-      document.getElementById("feedback").style.color = "darkgreen";
+    message = "Great! Congratulations";
+    document.getElementById("feedback").style.color = "darkgreen";
   }
 
   //CONFIGURING THE FEEDBACK ELEMENT TO DISPLAY THE STRENGTH_LEVEL AND MESSAGE
@@ -64,3 +67,15 @@ document.getElementById("checkBtn").onclick = function () {
     return passStrengthChecker(document.getElementById("passwordInput").value);
   }
 };
+
+const toggleEye = document.getElementById("toggleEye");
+
+toggleEye.addEventListener("click", () => {
+  if (document.getElementById("passwordInput").type === "text") {
+    document.getElementById("passwordInput").type = "password";
+
+    toggleEye.classList.toggle("fa-eye-slash");
+  } else {
+    document.getElementById("passwordInput").type = "text";
+  }
+});
