@@ -16,6 +16,22 @@ body{
     padding: 20px;
     gap: 10px;
 }
+.password-field {
+  position: relative;
+}
+
+.password-field>input {
+  width: 100%;
+  padding-right: 5px;
+}
+
+.password-field>i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
 .card>h1{
     text-transform: uppercase;
     text-decoration: solid;
