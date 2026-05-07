@@ -3,7 +3,7 @@ const passStrengthChecker = (password) => {
   let score = 0;
 
   //CRITERIA ONE --- AT LEAST 8 ELEMENTS
-  if (password.length === 8) {
+  if (password.length >= 8) {
     score++;
   }
   // CRITERIA TWO --- AT LEAST 12 ELEMENTS
@@ -31,7 +31,7 @@ const passStrengthChecker = (password) => {
     message =
       "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)";
     document.getElementById("feedback").style.color = "red";
-  } else if (score == 2) {
+  } else if (score === 2) {
     strengthLevel = `WEAK!`;
     message =
       "Your password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one number between 0-9, and one special character such as(!@#$%^&*)";
